@@ -1,0 +1,16 @@
+*.csproj
+*.DotSettings
+*.vsconfig
+*.sln
+*.user
+*.changes
+*.selector
+*.wktree
+*.workspace
+*.suo
+BulletTest/Library/
+BulletTest/Logs/
+BulletTest/obj/
+BulletTest/Packages/
+BulletTest/ProjectSettings/
+BulletTest/UserSettings/
