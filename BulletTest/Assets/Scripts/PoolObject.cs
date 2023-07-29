@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace Scripts
 {
+    /// <summary>
+    /// MonoBehaviour对象通用对象池
+    /// </summary>
     public abstract class PoolObject : MonoBehaviour
     {
         protected ObjectPool Pool;

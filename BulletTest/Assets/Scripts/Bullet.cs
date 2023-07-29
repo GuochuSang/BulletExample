@@ -42,7 +42,12 @@ namespace Scripts
                 }
             }
         }
-
+        /// <summary>
+        /// 克隆子弹
+        /// </summary>
+        /// <param name="pool">对象池引用</param>
+        /// <param name="specifyTransform">初始transform</param>
+        /// <returns></returns>
         public override PoolObject Clone(ObjectPool pool,Transform specifyTransform)
         {
             var bullet =  GameObject.Instantiate(gameObject, specifyTransform.position, specifyTransform.rotation,
@@ -53,7 +58,9 @@ namespace Scripts
             bullet.Activate(specifyTransform);
             return bullet;
         }
-
+        /// <summary>
+        /// 回收子弹
+        /// </summary>
         public override void DeactivateAndCollect()
         {
             IsActive = false;
@@ -62,7 +69,10 @@ namespace Scripts
             isMove = false;
             Pool.CollectPoolObject(this);
         }
-
+        /// <summary>
+        /// 激活子弹
+        /// </summary>
+        /// <param name="specifyTransform"></param>
         public override void Activate(Transform specifyTransform)
         {
             lifeTimer = 0;
